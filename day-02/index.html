@@ -12,29 +12,110 @@
   </head>
 
   <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
+    class="bg-white flex flex-col items-center justify-center min-h-screen"
   >
     <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
+      class="flex flex-row items-start justify-start  text-gray-800 p-8 space-y-4 shadow rounded-xl "
     >
+    <span class="flex flex-row items-start space-x-4"> 
       <!-- Logo and Title -->
+      <div class="flex flex-col items-center space-y-4">
       <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
+        src="https://polos.in/wp-content/uploads/2021/11/PLAYPOLOS-POLO-TSHIRT-TIPPING-ROYALBLUE.jpg"
         alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
+        class="w-20 h-20 hover:border-4 hover:scale-110 transition-transform duration-500 ease-in-out hover:border-fuchsia-500 rounded-xl "
+        onclick="changeImage('https:/polos.in/wp-content/uploads/2021/11/PLAYPOLOS-POLO-TSHIRT-TIPPING-ROYALBLUE.jpg')"
       />
-      <h1 class="text-2xl font-bold text-center">Add To Bag challenge</h1>
+      <img
+        src="https://polos.in/wp-content/uploads/2021/11/PLAYPOLOS-POLO-TSHIRT-TIPPING-GREY-MELANGE.jpg"
+        alt="BigDevSoon Logo"
+        class="w-20 h-20 hover:border-4 hover:border-fuchsia-500 hover:scale-110 transition-transform duration-500 ease-in-out rounded-xl " 
+        onclick="changeImage('https:/polos.in/wp-content/uploads/2021/11/PLAYPOLOS-POLO-TSHIRT-TIPPING-GREY-MELANGE.jpg')"
+      />
+      <img
+        src="https://polos.in/wp-content/uploads/2021/11/PLAYPOLOS-POLO-TSHIRT-TIPPING-CHARCOAL-MELANGE.jpg"
+        alt="BigDevSoon Logo"
+        class="w-20 h-20 hover:border-4 hover:border-fuchsia-500 hover:scale-110 transition-transform duration-500 ease-in-out rounded-xl "
+        onclick="changeImage('https:/polos.in/wp-content/uploads/2021/11/PLAYPOLOS-POLO-TSHIRT-TIPPING-CHARCOAL-MELANGE.jpg')"
+      />
+    </div>
+      <img
+        id="product-image"
+        src="https://polos.in/wp-content/uploads/2021/11/PLAYPOLOS-POLO-TSHIRT-TIPPING-ROYALBLUE.jpg"
+        alt="BigDevSoon Logo"
+        class="w-[400px] h-[550px] mx-auto"
+
+      />
+    </span>
+    <div class="flex flex-col items-start max-w-sm px-8 items-start">
+      <h2 class="text-lg font-bold text-fuchsia-500">POLO RALPH</h2>
+
+      <h1 class="text-3xl font-bold my-5"> Custom Fit Polo Bear Oxford Shirt</h1>
       <!-- Challenge Introduction -->
       <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
+        Blue polo shirt with a classic cut.Made of smooth and soft cotton. 
       </p>
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+      <!-- Price -->
+       <span class="flex flex-row items-center space-x-4">
+      <p class="text-4xl font-bold my-5">₹ 1,999</p>
+      <p class=" bg-blue-200 text-blue-800 text-sm rounded-sm"> - 33% </p>
+    </span>
+    <p class="text-lg font-bold my-5 line-through -mt-4">₹ 2,999</p>
+
+    
+    <div class="p-4 ">
+      <h2 class="font-bold text-lg mb-2">CHOOSE SIZE</h2>
+      <div class="flex  max-w-0.5 ">
+        <label class="cursor-pointer">
+          <input type="radio" name="size" value="S" class="hidden peer">
+          <span class="block w-10 h-10 flex items-center justify-center  peer-checked:bg-black peer-checked:text-white">
+            S
+          </span>
+        </label>
+        
+        <label class="cursor-pointer">
+          <input type="radio" name="size" value="M" class="hidden peer" checked>
+          <span class="block w-10 h-10 flex items-center justify-center  peer-checked:bg-black peer-checked:text-white">
+            M
+          </span>
+        </label>
+    
+        <label class="cursor-pointer">
+          <input type="radio" name="size" value="L" class="hidden peer">
+          <span class="block w-10 h-10 flex items-center justify-center  peer-checked:bg-black peer-checked:text-white">
+            L
+          </span>
+        </label>
+    
+        <label class="cursor-pointer">
+          <input type="radio" name="size" value="XL" class="hidden peer">
+          <span class="block w-10 h-10 flex items-center justify-center  peer-checked:bg-black peer-checked:text-white">
+            XL
+          </span>
+        </label>
+    
+        <label class="cursor-pointer">
+          <input type="radio" name="size" value="XXL" class="hidden peer">
+          <span class="block w-10 h-10 flex items-center justify-center  peer-checked:bg-black peer-checked:text-white">
+            XXL
+          </span>
+        </label>
+      </div>
+    </div>
+    
+
+    <button
+      class="bg-fuchsia-500 w-full hover:bg-fuchsia-700 text-white font-bold py-2 my-12 px-4 rounded focus:outline-none focus:shadow-outline"
+    >
+      ADD TO BAG
+    </button>
+    </div>
     </div>
   </body>
+  <script>
+    function changeImage(image) {
+      document.getElementById("product-image").src = image;
+    }
+  </script>
 </html>
