@@ -12,29 +12,62 @@
   </head>
 
   <body
-    class="bg-gray-900 flex flex-col items-center justify-center min-h-screen"
+    class="bg-gray-900  "
   >
-    <div
-      class="bg-white text-gray-800 p-8 space-y-4 shadow rounded-xl max-w-md md:max-w-lg"
-    >
-      <!-- Logo and Title -->
-      <img
-        src="https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/object/public/previews/logo-challenge-template.svg"
+  <img
+        src="./bgimg.jpg"
         alt="BigDevSoon Logo"
-        class="w-150 mx-auto"
+        class=" h-full w-full object-cover absolute"
       />
-      <h1 class="text-2xl font-bold text-center">Contact Us challenge</h1>
-      <!-- Challenge Introduction -->
-      <p class="text">
-        The goal is to transform the provided design screenshot into a
-        functional, complete challenge.
+    <div
+      class=" relative flex flex-row items-start justify-between  p-48"
+    >
+    <div class="w-[700px]" >
+      <h1 class="text-6xl font-bold text-white "> Contact Us</h1>
+      <p class="text-4xl  text-white mt-8 tracking-wider leading-relaxed">
+      Get in touch with us! Whether you have questions, feedback, or just want to say hello, we're here for you.  
       </p>
+    </div>
 
-      <p class="text-sm border-t pt-6">
-        <strong>Tip</strong>: This example uses TailwindCSS for styling. Feel
-        free to integrate other libraries using their CDNs to enhance your
-        challenge.
-      </p>
+          <!-- Form -->
+     <div class="bg-white p-8 rounded-xl shadow-xl mr-48  ">
+      <form class="flex flex-col items-start justify-start w-[600px] h-[800px] space-y-8">
+        <h2 class="text-4xl font-semibold mb-6">Send us a Message</h2>
+        <input
+          type="text"
+          placeholder="Name"
+          class="p-4 border border-gray-600 rounded-xl mb-4 w-full text-2xl"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="p-4 border border-gray-600 rounded-xl mb-4 w-full text-2xl"
+        />
+        <input
+          type="tel"
+          placeholder="Phone"
+          class="p-4 border border-gray-600 rounded-xl mb-4 w-full text-2xl"/>
+
+        <p class="text-gray-700 text-2xl">Preferred contact method of communication</p>
+        <div class="flex items-center space-x-4 mt-2 text-2xl">
+
+          <input type="radio" id="email_method" name="contact_method" value="email" class="mr-2"/>
+          <label for="email_method">Email</label>
+          <input type="radio" id="phone_method" name="contact_method" value="phone" class="mr-2"/>
+          <label for="phone_method">Phone</label>
+        </div>
+        <textarea
+          placeholder="Message"
+          class="p-4 border border-gray-300 rounded-xl text-2xl mb-4 w-full h-44"
+        ></textarea>
+      </form>
+        <button
+          class="bg-pink-500 text-white py-3 rounded-full font-semibold hover:bg-pink-700 w-full text-2xl "
+        >
+          Submit
+        </button>
+     </div>
+  
     </div>
   </body>
 </html>
